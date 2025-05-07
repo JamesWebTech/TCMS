@@ -1,0 +1,521 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #809D3C;
+  overflow-x: hidden;
+}
+
+/* Sidebar Navigation */
+.navigation {
+  width: 250px;
+  position: fixed;
+  left: 10px;
+  top: 15px;
+  border-radius: 8px;
+  max-height: 700px;
+  height: 100vh;
+  background-color: #343a40;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar content arrangement */
+.nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Schedule at the top */
+.nav-item.schedule {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Map in the middle */
+.nav-item.map {
+  width: 100%;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logout at the bottom */
+.nav-item.logout {
+  margin-top: auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.navbar_style {
+  margin-bottom: 450px;
+}
+
+.dashboard {
+  margin-left: 200px;
+}
+
+.details {
+  width: 40%;
+  margin-left: 200px;
+}
+
+.logout {
+  margin-top: 400px;
+  margin-left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Sidebar links */
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: white !important;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.active {
+  background-color: #007bff;
+  color: white !important;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 123, 255, 0.2) !important;
+  color: #007bff !important;
+  border-radius: 8px;
+}
+
+/* Main content container */
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+  width: calc(100% - 270px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Schedule container (moved to right side) */
+
+
+/* Table container */
+#schedule-table {
+  max-height: 70vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+
+
+
+/* Sticky table header */
+#schedule-table thead {
+  background-color: #007bff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Table body scrollable */
+#schedule-table tbody {
+  display: block;
+  max-height: calc(70vh - 50px);
+  overflow-y: auto;
+  width: 100%;
+}
+
+#schedule-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: auto;
+}
+
+#schedule-table th,
+#schedule-table td {
+  text-align: center;
+  padding: 10px;
+  min-width: 150px;
+  word-wrap: break-word;
+}
+
+/* Zebra striping */
+#schedule-table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+#schedule-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+#schedule-table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* Scrollbar styling */
+#schedule-table::-webkit-scrollbar {
+  width: 8px;
+}
+
+#schedule-table::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+#schedule-table::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Button alignment */
+#schedule-table .form-control {
+  width: auto;
+}
+
+#schedule-table .btn {
+  padding: 5px 10px;
+  font-size: 0.875rem;
+  border-radius: 3px;
+}
+
+#schedule-table .btn-warning {
+  background-color: #ffc107;
+  color: white;
+}
+
+
+.bottom-links a:hover {
+  text-decoration: underline;
+  color: #f8f9fa !important;
+}
+
+/* Modal content styles */
+.modal-content {
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.modal-body {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+
+.navbar-dropdown-toggle {
+  background-color: #6c757d;
+}
+
+.nav-menu .nav-link {
+  padding-left: 1.5rem;
+  font-size: 1rem;
+}
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  .navigation {
+    width: 95%;
+    height: 70px;
+    padding: 10px;
+    position: relative;
+    z-index: 1050;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1050;
+  }
+
+  .col-md-9.col-lg-10,
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+
+  .bottom-links {
+    position: fixed;
+    margin-top: 60px;
+    left: 220px;
+    font-size: 13px;
+    z-index: 999;
+  }
+
+  .bottom-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+
+  /* Schedule at the top */
+  .nav-item.schedule {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  /* Map in the middle */
+  .nav-item.map {
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Logout at the bottom */
+  .nav-item.logout {
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .navbar_style {
+    margin-bottom: 450px;
+  }
+
+  .dashboard {
+    margin-left: 0;
+  }
+
+  .details {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .logout {
+    margin-top: 400px;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #map-container {
+    width: 93vw;
+    height: 70vh;
+  }
+
+}
+
+#trash-bin {
+  width: 30px !important;
+  /* smaller size for mobile */
+}
+
+/* Optional: Adjust the positions if needed */
+#trash-bin:nth-of-type(1) {
+  top: 20%;
+  left: 20%;
+}
+
+#trash-bin:nth-of-type(2) {
+  top: 30%;
+  left: 30%;
+}
+
+
+
+.modal-dialog {
+  max-width: 95%;
+  margin: 1rem auto;
+}
+
+.modal-content {
+  font-size: 0.75rem;
+  height: 300px;
+  width: 300px;
+  margin-left: 20px;
+  margin-top: 150px;
+
+}
+
+.modal-body img {
+  width: 60px;
+  max-width: 25%;
+  height: 30%;
+}
+
+.circle-indicator {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-body .row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.modal-body .col {
+  padding: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.modal-body strong {
+  font-size: 0.6rem;
+  display: block;
+  margin-top: 4px;
+}
+
+
+
+#schedule-table {
+  width: 100%;
+  table-layout: fixed;
+  /* Ensures equal column widths */
+  border-collapse: collapse;
+  font-size: 8px;
+}
+
+/* Header cells */
+#schedule-table th {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  word-wrap: break-word;
+}
+
+/* Body cells */
+#schedule-table td {
+  text-align: center;
+  padding: 6px;
+  word-wrap: break-word;
+  min-width: 65px;
+}
+
+/* Zebra striping */
+#schedule-table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+#schedule-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+#schedule-table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+#schedule-table .form-select {
+  font-size: 0.4rem;
+  width: 100%;
+  height: 30px;
+  padding: 4px 20px 4px 6px;
+  /* space for the arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='gray' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#schedule-table .btn {
+  font-size: 0.4rem;
+  padding: 4px 6px;
+  margin-top: 4px;
+  border-radius: 3px;
+}
+
+/* -------- Medium Devices (Tablets) -------- */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .navigation {
+    position: fixed;
+    width: 200px;
+    max-height: 800px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 15px;
+  }
+
+  .main-content {
+    margin-left: 220px;
+    padding: 20px;
+    flex-direction: column;
+    width: calc(100% - 220px);
+  }
+
+  .dashboard,
+  .details,
+  .schedule-container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #map-container {
+    width: 100%;
+    height: 60vh;
+  }
+}
+
+
+
+/* -------- Large Devices (Desktops) -------- */
+@media screen and (min-width: 1024px) {
+  .navigation {
+    position: fixed;
+    left: 10px;
+    top: 15px;
+    width: 250px;
+    height: 100vh;
+  }
+
+  .main-content {
+    margin-left: 270px;
+    width: calc(100% - 270px);
+    flex-direction: row;
+  }
+
+  .schedule-container {
+    width: 65%;
+    align-items: flex-end;
+  }
+
+  .dashboard,
+  .details {
+    margin-left: 200px;
+    width: 40%;
+  }
+
+  #map-container {
+    width: 60vw;
+    height: 70vh;
+  }
+
+}

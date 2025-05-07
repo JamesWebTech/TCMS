@@ -1,0 +1,301 @@
+/* General Body Styles */
+html,
+body {
+    font-family: Arial, sans-serif;
+    background-color: #809D3C;
+    overflow: hidden;
+}
+
+/* Sidebar Navigation */
+.navigation {
+    width: 250px;
+    position: fixed;
+    left: 10px;
+    top: 15px;
+    border-radius: 8px;
+    max-height: 700px;
+    height: 100vh;
+    background-color: #343a40;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar content arrangement */
+.nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Schedule at the top */
+.nav-item.schedule {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Map in the middle */
+.nav-item.map {
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logout at the bottom */
+.nav-item.logout {
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.navbar_style {
+    margin-bottom: 450px;
+}
+
+.dashboard {
+    margin-left: 200px;
+}
+
+
+
+.logout {
+    margin-top: 400px;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Sidebar links */
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    color: white !important;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.active {
+    background-color: #007bff;
+    color: white !important;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.2) !important;
+    color: #007bff !important;
+    border-radius: 8px;
+}
+
+/* Main content container */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+.bottom-links {
+    position: fixed;
+    margin-top: 0px;
+    left: 220px;
+    font-size: 13px;
+    z-index: 999;
+}
+
+.bottom-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* Modal content styles */
+.modal-content {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.modal-body {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+
+.navbar-dropdown-toggle {
+    background-color: #6c757d;
+}
+
+.nav-menu .nav-link {
+    padding-left: 1.5rem;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .navigation {
+        width: 95%;
+        height: 70px;
+        padding: 10px;
+        position: relative;
+        z-index: 1050;
+    }
+
+    .dashboard {
+        margin-left: -250px;
+    }
+
+    .Map {
+        margin-bottom: 420px;
+        margin-left: -180px;
+        color: black;
+    }
+
+    .details {
+        width: 320px;
+        margin-left: -270px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    /* Make the user welcome header consistent */
+    .details h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .details p {
+        font-size: 14px;
+        word-wrap: break-word;
+        margin-bottom: 6px;
+    }
+
+
+    .bottom-links {
+        position: fixed;
+        margin-top: 60px;
+        left: 220px;
+        font-size: 13px;
+        z-index: 999;
+    }
+
+    .bottom-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 5px;
+    }
+
+    #map-container {
+        height: 60vh;
+        width: 90vw;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    .map-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #trash-bin {
+        width: 30px !important;
+        /* smaller size for mobile */
+    }
+
+    /* Optional: Adjust the positions if needed */
+    #trash-bin:nth-of-type(1) {
+        top: 50%;
+        left: 50%;
+    }
+
+    #trash-bin:nth-of-type(2) {
+        top: 30%;
+        left: 30%;
+    }
+
+    /* Trash Bin Icons */
+    .trash-bin {
+        position: absolute;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    /* Fully responsive schedule card and table */
+    .schedule_card {
+        width: 320px;
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 14px;
+        overflow-x: auto;
+        box-sizing: border-box;
+        margin-left: -270px;
+    }
+
+    .schedule_card h2 {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .schedule_card .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .schedule_card table {
+        width: 100%;
+        min-width: 480px;
+        /* ensures horizontal scroll for narrow viewports */
+        border-collapse: collapse;
+        font-size: 13px;
+    }
+
+    .schedule_card th,
+    .schedule_card td {
+        padding: 8px;
+        text-align: left;
+        white-space: nowrap;
+        /* prevents text from breaking into multiple lines */
+    }
+
+    .schedule_card thead {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .schedule_card tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+
+
+
+
+
+}

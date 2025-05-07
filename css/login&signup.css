@@ -1,0 +1,472 @@
+/* =================== GLOBAL STYLES =================== */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../bigaa.png'), url('../bigaalogo.png');
+  background-color: black;
+  background-size: cover;
+  background-position: center, top left;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 190px;
+  height: 190px;
+  background-image: url('../bigaalogo.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* =================== LOGIN FORM =================== */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+}
+
+.card-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 450px;
+  /* Ensures max width on larger screens */
+}
+
+h2.card-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 42px;
+  text-align: left;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  height: 45px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.forgot_password,
+.Login_registration {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.text-decoration-none:hover {
+  text-decoration: underline;
+}
+
+.text-center p {
+  margin-top: -8%;
+}
+
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-header {
+  background-color: #dc3545;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-header .close {
+  color: white;
+  opacity: 0.8;
+}
+
+.modal-header .close:hover {
+  opacity: 1;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+
+
+
+/* =================== RESPONSIVE STYLES =================== */
+
+/* Large screens (Desktops) */
+@media (min-width: 1025px) {
+  body::before {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 5%;
+    transform: translateX(-50%);
+  }
+
+  .card {
+    width: 300px;
+    max-height: 500px;
+    overflow-y: hidden;
+    margin: 20px auto;
+    margin-top: 20%;
+    margin-left: -90%;
+    padding: 20px;
+  }
+
+  .card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  h2.card-title {
+    font-size: 24px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+
+  .form-control {
+    padding: 12px;
+    font-size: 13px;
+    height: 42px;
+  }
+
+  .btn {
+    font-size: 14px;
+    height: 42px;
+  }
+
+  .Already_have {
+    font-size: 0.8rem;
+  }
+
+  .modal-dialog {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 420px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .modal-content {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  body.modal-open {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+/* Medium screens (Tablets and below) */
+@media (max-width: 1024px) {
+  body::before {
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    left: 5%;
+    transform: translateX(-50%);
+  }
+
+  .card {
+    width: 300px;
+    max-height: 500px;
+    overflow-y: hidden;
+    margin: 20px auto;
+    margin-top: 20%;
+    margin-left: -60%;
+    padding: 20px;
+  }
+
+  .card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  h2.card-title {
+    font-size: 24px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+
+  .form-control {
+    padding: 12px;
+    font-size: 13px;
+    height: 42px;
+  }
+
+  .btn {
+    font-size: 14px;
+    height: 42px;
+  }
+
+  .Already_have {
+    font-size: 0.8rem;
+  }
+
+  .modal-dialog {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .modal-content {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  body.modal-open {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+/* Small screens (Tablets in landscape mode, Portrait tablets) */
+@media (max-width: 768px) {
+  body::before {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 10%;
+    transform: translateX(-50%);
+  }
+
+  .card {
+    width: 300px;
+    max-height: 500px;
+    overflow-y: hidden;
+    margin: 20px auto;
+    margin-top: 20%;
+    margin-left: -20%;
+    padding: 20px;
+  }
+
+  .schedule-body h2.card-title {
+    font-size: 24px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+
+  .form-control {
+    padding: 12px;
+    font-size: 13px;
+    height: 42px;
+  }
+
+  .btn {
+    font-size: 14px;
+    height: 42px;
+  }
+
+  .Already_have {
+    font-size: 0.8rem;
+  }
+
+  .modal-dialog {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .modal-content {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  body.modal-open {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+/* Mobile devices (Below tablets) */
+@media (max-width: 480px) {
+  body {
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
+
+  body::before {
+    width: 100px;
+    height: 100px;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .card {
+    width: 90%;
+    max-height: 450px;
+    overflow-y: hidden;
+    margin: 20px auto;
+    margin-top: 20%;
+    padding: 20px;
+  }
+
+  .card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  h2.card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+    text-align: center;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 0.6rem;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-control {
+    padding: 0.3rem;
+    font-size: 0.7rem;
+    width: 200px;
+    height: auto;
+    overflow-y: hidden;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 0.3rem 1.2rem;
+    width: 190px;
+    margin-left: 3%;
+    height: auto;
+  }
+
+  .Already_have {
+    font-size: 0.8rem;
+  }
+
+  .modal-dialog {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .modal-content {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  body.modal-open {
+    overflow: hidden;
+    height: 100%;
+  }
+}

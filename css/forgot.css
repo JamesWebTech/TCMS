@@ -1,0 +1,145 @@
+/* =================== GLOBAL STYLES =================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../bigaa.png'), url('../bigaalogo.png');
+    background-color: black;
+    background-size: cover;
+    background-position: center, top left;
+    background-repeat: no-repeat;
+}
+
+/* Logo Circle Styling */
+body::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 190px;
+    height: 190px;
+    background-image: url('../bigaalogo.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Slight transparency */
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Heading Styling */
+h3 {
+    font-size: 1.6rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Label Styling */
+.form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Form Input Styling */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Small Text Styling */
+.text-center {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.text-center a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.text-center a:hover {
+    color: #0056b3;
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modal-header {
+    background-color: #dc3545;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.2rem;
+}
+
+.modal-body {
+    font-size: 1rem;
+    color: #333;
+}
+
+.modal-body p {
+    margin: 0;
+}
+
+/* Modal Close Button */
+.modal-header .btn-close {
+    border: none;
+    color: white;
+}
+
+/* Error Message in Modal */
+.modal-body {
+    color: #dc3545;
+}
