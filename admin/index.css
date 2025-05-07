@@ -1,0 +1,636 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #809D3C;
+    overflow-x: hidden;
+}
+
+/* Sidebar Navigation */
+.navigation {
+    width: 250px;
+    position: fixed;
+    left: 10px;
+    top: 15px;
+    border-radius: 8px;
+    max-height: 650px;
+    height: 100vh;
+    background-color: #343a40;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+.nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+    background-color: #007bff;
+}
+
+/* Keep Logout Button at the Bottom */
+.nav-item.logout {
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Logout Button */
+.logout button {
+    width: 100%;
+    background-color: #dc3545;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout button:hover {
+    background-color: #c82333;
+}
+
+/* Map Container */
+#map-container {
+    height: 80vh;
+    width: 75vw;
+    background-image: url('../bigaamap.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-left: 150px;
+}
+
+/* Wrapper to maintain scaling */
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Trash Bin Icons */
+.trash-bin {
+    position: absolute;
+    width: 50px;
+    cursor: pointer;
+}
+
+/* Specific Positions for Each Bin */
+.bin-1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bin-2 {
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-indicator {
+    width: 50px;
+    height: 50px;
+}
+
+.circle-background {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3;
+}
+
+.circle-background.empty { stroke: #c8e6c9; }   /* Light green */
+.circle-background.med { stroke: #fff9c4; }  /* Light yellow */
+.circle-background.high { stroke: #ffe0b2; }    /* Light orange */
+.circle-background.full { stroke: #ffcdd2; }    /* Light red */
+
+.circle-progress {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: stroke 0.3s;
+    stroke: #ccc; /* Default inactive */
+}
+
+.circle-progress.active.empty { fill: #4caf50; }   /* Green */
+.circle-progress.active.med { fill: #ffeb3b; }  /* Yellow */
+.circle-progress.active.high { fill: orange; }     /* Orange */
+.circle-progress.active.full { fill: #f44336; }    /* Red */
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.col {
+    text-align: center;
+}
+
+.col strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.table_card,
+.schedule_card {
+    width: 80%;
+    margin-left: 290px;
+}
+
+
+
+.collector_card {
+    margin-left: 300px;
+    width: 40%;
+}
+
+.user_card {
+    margin-right: 400px;
+    width: 40%;
+    height: 40%;
+
+}
+
+.schedule {
+    margin-left: -300px;
+    width: 100%;
+}
+
+.collector_card2 {
+    margin-top: 30px;
+    width: 40%;
+    margin-left: 150px;
+}
+
+.collector_list {
+    width: 800px;
+    max-width: 100%;
+    margin-left: 400px;
+    margin-top: -375px;
+}
+
+.link,
+a {
+    color: #000;
+}
+
+.dashboard {
+    margin-top: 20px;
+    margin-left: 300px;
+}
+
+.logout {
+    margin-top: 300px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.bottom-links {
+    position: fixed;
+    margin-top: 60px;
+    left: 220px;
+    font-size: 13px;
+    z-index: 999;
+}
+
+.bottom-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.schedule-bg {
+    background: #8ba94d;
+    padding: 20px 0;
+    min-height: 100vh;
+}
+
+.schedule-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 3px solid #8ba94d;
+    margin: 0 auto;
+    max-width: 95%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.schedule-card-body {
+    display: flex;
+    flex-direction: column;
+    height: 300px;         /* Fixed height */
+    padding: 24px;
+}
+
+.card-title {
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.schedule-table-container {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table {
+    margin-bottom: 0;
+    width: 100%;
+    background: transparent;
+    font-size: 1.1rem;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+    .schedule-card {
+        max-width: 100%;
+        border-width: 2px;
+    }
+    .schedule-card-body {
+        padding: 12px 4px;
+        height: 220px;    /* Fixed height for tablet */
+    }
+    .table {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+    .schedule-card {
+        border-width: 1px;
+        border-radius: 5px;
+    }
+    .schedule-card-body {
+        padding: 6px 1px;
+        height: 140px;    /* Fixed height for mobile */
+    }
+    .table {
+        font-size: 0.9rem;
+    }
+    .table th, .table td {
+        padding: 4px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    body {
+        font-size: 14px;
+    }
+
+    .dashboard {
+        margin-top: 20px;
+        margin-left: 240px;
+    }
+
+    .navigation {
+        width: 220px;
+        left: 8;
+        top: 5;
+        padding: 15px;
+        border-radius: 6px;
+        max-height: 100vh;
+        height: 700px;
+    }
+
+    
+    .schedule_card {
+        width: 80%;
+        margin-bottom: 50px;
+        margin-left: 200px;
+    }
+    
+    
+    .nav-link {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .logout {
+        margin-top: 300px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #map-container {
+        width: 75vw;
+        height: 70vh;
+        margin-left: 120px;
+        margin-top: 20px;
+    }
+
+    .map-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .trash-bin {
+        width: 40px;
+    }
+
+    .circle-indicator {
+        width: 40px;
+        height: 40px;
+    }
+
+    .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-evenly;
+        margin: 10px 0;
+    }
+
+    .col {
+        flex: 0 0 45%;
+        font-size: 13px;
+    }
+
+    .col strong {
+        font-size: 13px;
+    }
+
+    .collector_card {
+        margin-left: 0;
+        width: 40%;
+    }
+
+    .user_card {
+        margin-right: 0;
+        width: 40%;
+        height: 40%;
+        margin-top: -145px;
+    }
+
+    .schedule {
+        margin-left: -200px;
+        width: 100%;
+    }
+
+    .collector_card2 {
+        margin-top: 30px;
+        width: 40%;
+        margin-left: 120px;
+    }
+
+    .collector_list {
+        width: 700px;
+        max-width: 100%;
+        margin-left: 280px;
+        margin-top: -375px;
+    }
+
+    .link,
+    a {
+        color: #000;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    body {
+        font-size: 13px;
+    }
+
+    .dashboard {
+        margin-top: 20px;
+        margin-left: 200px;
+    }
+
+    .navigation {
+        width: 180px;
+        left: 0;
+        top: 0;
+        padding: 15px;
+        border-radius: 6px;
+        max-height: 100vh;
+    }
+
+    .nav-link {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .logout {
+        margin-top: 200px;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .table_card,
+    .schedule_card {
+        width: 90%;
+        margin-left: 180px;
+    }
+
+    #map-container {
+        width: 90vw;
+        height: 65vh;
+        margin-left: 180px;
+        margin-top: 20px;
+    }
+
+    .map-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .trash-bin {
+        width: 35px;
+    }
+
+    .circle-indicator {
+        width: 35px;
+        height: 35px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col {
+        width: 90%;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .collector_card,
+    .user_card,
+    .collector_card2 {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .schedule {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .collector_list {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .link,
+    a {
+        color: #000;
+    }
+}
+
+
+/* Mobile Phones: BlackBerry Z30 up to iPhone 14 Pro Max and similar (320px to 480px) */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .dashboard {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .navigation {
+        width: 90%;
+        margin-right: 15px;
+        height: auto;
+        position: relative;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .square-card {
+        width: 90%;
+        margin-bottom: 10px;
+        height: auto;
+    }
+
+    .col-md-9.col-lg-10,
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .col {
+        text-align: center;
+    }
+
+    .col strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    .bottom-links {
+        position: fixed;
+        margin-top: 60px;
+        left: 220px;
+        font-size: 13px;
+        z-index: 999;
+    }
+
+    .bottom-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 5px;
+    }
+
+    .table_card,
+    .schedule_card {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .collector_card {
+        margin-left: 0;
+        width: 45%;
+    }
+
+    .collector_card2 {
+        width: 90%;
+        height: 20%;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+
+    .collector_list {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .user_card {
+        margin-right: 0;
+        width: 40%;
+        height: 40%;
+        margin-top: -128px;
+    }
+
+    .add,
+    .save {
+        height: 30px;
+        font-size: 0.85rem;
+    }
+
+    #map-container {
+        width: 90vw;
+        height: 70vh;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .map-wrapper {
+        width: 100%;
+    }
+
+    .form-control {
+        font-size: 0.7rem;
+    }
+
+    .link,
+    a {
+        color: #000;
+    }
+
+    .modal-content {
+        height: 80Vh;
+    }
+
+    .schedule {
+        margin-left: 20px;
+        width: 90%;
+    }
+}
